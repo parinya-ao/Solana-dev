@@ -1,0 +1,19 @@
+{
+	"name": "Solana Dev Container",
+	"context": "..",
+	"dockerFile": "../Dockerfile",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode-remote.remote-containers",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"rust-lang.rust-analyzer" 
+			],
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			}
+		}
+	},
+	"postCreateCommand": "npm install"
+}
