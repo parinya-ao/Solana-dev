@@ -4,8 +4,6 @@ ARG USERNAME=camper
 ARG REPO_NAME=solana-curriculum
 ARG HOMEDIR=/workspace/$REPO_NAME
 
-RUN ln -snf /usr/share/zoneinfo/Asia/Bangkok /etc/localtime && echo "Asia/Bangkok" > /etc/timezone
-
 ENV TZ="Asia/Bangkok"
 ENV HOME=/workspace
 
@@ -39,7 +37,7 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 ENV PATH="/workspace/.cargo/bin:${PATH}"
 
 # Solana
-RUN sh -c "$(curl -sSfL https://release.solana.com/v1.17.18/install)"
+RUN sh -c "$(curl -sSfL https://release.anza.xyz/stable/install)"
 # RUN wget https://github.com/solana-labs/solana/releases/download/v1.16.9/solana-release-x86_64-unknown-linux-gnu.tar.bz2
 # RUN tar jxf solana-release-x86_64-unknown-linux-gnu.tar.bz2
 # RUN cd solana-release/
